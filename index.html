@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUNNI ROBUX</title>
+    <style>
+      :root {
+        --pink-1: #fff7fb;
+        --pink-2: #ffd9ea;
+        --pink-3: #ffb6d5;
+        --pink-4: #f7d6f4;
+        --purple-1: #a782ff;
+        --purple-2: #7b6de5;
+        --cyan-1: #dff9ff;
+        --sky-1: #99d9ff;
+        --mint-1: #3ac7a3;
+        --green-1: #0a8f58;
+        --red-1: #ff3a3a;
+        --text-1: #23314d;
+        --text-2: #5b6477;
+        --line: #e7e7ef;
+        --white: #ffffff;
+        --shadow: 0 18px 40px rgba(124, 88, 160, 0.15);
+        --radius: 22px;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background:
+          radial-gradient(circle at top left, #fffafc 0%, #f7f7ff 40%, #eefcff 100%);
+        color: var(--text-1);
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      button, input, select {
+        font: inherit;
+      }
+
+      .container {
+        width: min(1200px, calc(100% - 24px));
+        margin: 0 auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.7);
+        border-bottom: 1px solid rgba(180, 190, 230, 0.4);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+        gap: 16px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+
+      .brand-mark {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ffdff0, #c9ebff 55%, #d6d1ff);
+        border: 3px solid rgba(255,255,255,0.9);
+        position: relative;
+        box-shadow: 0 8px 20px rgba(180, 140, 245, 0.2);
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 12px 13px 14px;
+        border-radius: 50% 50% 40% 40%;
+        background: linear-gradient(135deg, #fffdfb, #f9d7f2 70%);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: var(--text-2);
+        font-weight: 600;
+      }
+
+      .nav a:hover { color: var(--purple-2); }
+
+      .top-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .btn {
+        border: none;
+        border-radius: 12px;
+        padding: 12px 18px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #ff8ec7, #b486ff);
+        color: white;
+        box-shadow: 0 10px 20px rgba(180, 120, 255, 0.28);
+      }
+
+      .btn-primary:hover { transform: translateY(-1px); }
+
+      .btn-secondary {
+        background: white;
+        color: var(--text-1);
+        border: 1px solid rgba(160, 170, 200, 0.4);
+      }
+
+      .btn-soft {
+        background: #f6f2ff;
+        color: var(--purple-2);
+      }
+
+      .btn-danger {
+        background: linear-gradient(135deg, #ff7d7d, #ff4b84);
+        color: white;
+      }
+
+      .hero {
+        padding: 34px 0 20px;
+      }
+
+      .hero-card {
+        background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(255, 242, 248, 0.94));
+        border: 1px solid rgba(186, 197, 255, 0.4);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        min-height: 420px;
+      }
+
+      .hero-left {
+        padding: 38px 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-left::before {
+        content: "";
+        position: absolute;
+        right: -80px;
+        top: -50px;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(178, 216, 255, 0.45), rgba(178,216,255,0));
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.8);
+        border: 1px solid rgba(160,170,200,0.35);
+        color: var(--purple-2);
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      .hero h1 {
+        margin: 0 0 18px;
+        line-height: 1.1;
+        font-size: clamp(2.1rem, 3vw, 4rem);
+        letter-spacing: -0.04em;
+      }
+
+      .hero h1 .accent {
+        display: block;
+        color: #ff5d97;
+      }
+
+      .subtitle {
+        max-width: 620px;
+        color: var(--text-2);
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+
+      .cta-row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 28px;
+      }
+
+      .chip-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 8px;
+      }
+
+      .chip {
+        background: rgba(163, 220, 255, 0.18);
+        border: 1px solid rgba(121, 170, 255, 0.24);
+        padding: 10px 14px;
+        border-radius: 10px;
+        color: var(--text-2);
+        font-weight: 700;
+      }
+
+      .hero-right {
+        position: relative;
+        background:
+          linear-gradient(135deg, rgba(195, 224, 255, 0.72), rgba(255, 230, 246, 0.8));
+        padding: 20px;
+      }
+
+      .cloud-card {
+        position: absolute;
+        inset: 12px 12px 12px 12px;
+        border-radius: 24px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.22));
+        border: 1px solid rgba(255,255,255,0.8);
+      }
+
+      .cute-showcase {
+        position: absolute;
+        inset: 18px 18px 18px 18px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .char {
+        position: relative;
+        width: 300px;
+        height: 320px;
+      }
+
+      .char .head {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 18px;
+        width: 160px;
+        height: 160px;
+        background: linear-gradient(180deg, #ffeef8, #f7d8f3);
+        border-radius: 46% 46% 52% 52%;
+        box-shadow: inset 0 -8px 0 rgba(255, 255, 255, 0.5);
+      }
+
+      .char .ear {
+        position: absolute;
+        width: 44px;
+        height: 58px;
+        background: #ffcee8;
+        border-radius: 50%;
+        top: -18px;
+        box-shadow: inset 0 -8px 0 rgba(255,255,255,0.25);
+      }
+
+      .char .ear.left { left: 58px; transform: rotate(-10deg); }
+      .char .ear.right { right: 58px; transform: rotate(10deg); }
+
+      .char .face {
+        position: absolute;
+        inset: 22px 20px 0;
+      }
+
+      .char .eye {
+        position: absolute;
+        width: 18px;
+        height: 22px;
+        border-radius: 50%;
+        background: #2a2e43;
+        top: 38px;
+      }
+
+      .char .eye.left { left: 32px; }
+      .char .eye.right { right: 32px; }
+
+      .char .blush {
+        position: absolute;
+        width: 26px;
+        height: 18px;
+        background: rgba(255, 102, 170, 0.3);
+        border-radius: 50%;
+        top: 66px;
+      }
+
+      .char .blush.left { left: 10px; }
+      .char .blush.right { right: 10px; }
+
+      .char .nose {
+        position: absolute;
+        width: 18px;
+        height: 16px;
+        background: #ffbfd7;
+        border-radius: 50%;
+        top: 64px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .char .mouth {
+        position: absolute;
+        width: 62px;
+        height: 28px;
+        border: 4px solid transparent;
+        border-bottom-color: #ff6da2;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 82px;
+      }
+
+      .char .body {
+        position: absolute;
+        width: 180px;
+        height: 120px;
+        background: linear-gradient(180deg, #ffe0f6, #d9ebff);
+        border-radius: 40% 40% 32% 32%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        box-shadow: inset 0 -10px 0 rgba(255,255,255,0.45);
+      }
+
+      .char .body::before,
+      .char .body::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 90px;
+        background: #f8d8e9;
+        border-radius: 50%;
+        bottom: 48px;
+      }
+
+      .char .body::before { left: -18px; transform: rotate(-26deg); }
+      .char .body::after { right: -18px; transform: rotate(26deg); }
+
+      .stat-mini {
+        position: absolute;
+        background: rgba(255,255,255,0.92);
+        border: 1px solid rgba(160,170,200,0.25);
+        border-radius: 18px;
+        padding: 12px 16px;
+        box-shadow: 0 14px 24px rgba(147, 136, 255, 0.12);
+      }
+
+      .stat-mini.one { top: 24px; right: 20px; }
+      .stat-mini.two { bottom: 40px; left: 24px; }
+      .stat-mini .number { font-size: 1.25rem; font-weight: 800; color: var(--purple-2); }
+      .stat-mini .label { font-size: 0.74rem; color: var(--text-2); }
+
+      .section {
+        padding: 18px 0 20px;
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .section-header h2 {
+        margin: 0;
+        font-size: clamp(1.5rem, 2vw, 2.4rem);
+        letter-spacing: -0.03em;
+      }
+
+      .section-header .subtle {
+        color: var(--text-2);
+        font-weight: 600;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .pkg-card {
+        background: rgba(255,255,255,0.9);
+        border: 1px solid rgba(186, 197, 255, 0.34);
+        border-radius: 22px;
+        padding: 20px 20px 18px;
+        box-shadow: 0 10px 24px rgba(118, 128, 175, 0.08);
+      }
+
+      .pkg-card.featured {
+        background: linear-gradient(135deg, #fff0fa, #f7f3ff);
+        border-color: rgba(181, 131, 255, 0.32);
+      }
+
+      .pkg-card .tag {
+        display: inline-block;
+        padding: 8px 10px;
+        border-radius: 10px;
+        background: #fff4d9;
+        color: #b76600;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+      }
+
+      .pkg-card h3 {
+        margin: 16px 0 6px;
+        font-size: 2rem;
+      }
+
+      .pkg-card .price {
+        font-weight: 900;
+        font-size: 1.75rem;
+        color: var(--purple-2);
+      }
+
+      .pkg-card .price small {
+        font-size: 0.8rem;
+        color: var(--text-2);
+        margin-left: 6px;
+      }
+
+      .pkg-card ul {
+        margin: 18px 0 16px;
+        padding-left: 18px;
+        color: var(--text-2);
+        line-height: 1.8;
+      }
+
+      .wheel-wrap {
+        background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(242,248,255,0.95));
+        border: 1px solid rgba(186, 197, 255, 0.34);
+        border-radius: 30px;
+        padding: 26px;
+        position: relative;
+      }
+
+      .wheel-panel {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 26px;
+        align-items: center;
+      }
+
+      .wheel-box {
+        position: relative;
+        width: min(420px, 100%);
+        min-height: 420px;
+        margin: 0 auto;
+      }
+
+      .wheel {
+        width: 100%;
+        aspect-ratio: 1;
+        position: relative;
+        border-radius: 50%;
+        background: conic-gradient(
+          #ff9dc8 0 20%,
+          #ffd878 20% 40%,
+          #80d6ff 40% 60%,
+          #b0ffa9 60% 80%,
+          #b9b3ff 80% 100%
+        );
+        border: 12px solid white;
+        box-shadow: 0 22px 34px rgba(106, 118, 175, 0.18);
+        transition: transform 4.5s cubic-bezier(0.15, 0.82, 0.22, 1);
+        overflow: hidden;
+      }
+
+      .wheel::before {
+        content: "";
+        position: absolute;
+        inset: 16px;
+        border-radius: 50%;
+        border: 2px solid rgba(255,255,255,0.8);
+      }
+
+      .wheel .segment {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        color: #203058;
+        font-size: 1.08rem;
+      }
+
+      .wheel .segment span {
+        width: 90px;
+        text-align: center;
+        transform: rotate(90deg);
+        position: absolute;
+      }
+
+      .wheel .segment:nth-child(1) { clip-path: polygon(50% 50%, 100% 0, 100% 100%); }
+      .wheel .segment:nth-child(2) { clip-path: polygon(50% 50%, 100% 100%, 0 100%); }
+      .wheel .segment:nth-child(3) { clip-path: polygon(50% 50%, 0 100%, 0 0); }
+      .wheel .segment:nth-child(4) { clip-path: polygon(50% 50%, 0 0, 100% 0); }
+
+      .spin-pointer {
+        position: absolute;
+        left: 50%;
+        top: -10px;
+        width: 0;
+        height: 0;
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        border-top: 36px solid #ff4d7d;
+        transform: translateX(-50%) rotate(180deg);
+        filter: drop-shadow(0 6px 8px rgba(255, 77, 125, 0.35));
+      }
+
+      .wheel-center {
+        position: absolute;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #fff, #ffe7f5);
+        border: 8px solid rgba(255,255,255,0.9);
+        box-shadow: 0 10px 18px rgba(168, 123, 255, 0.22);
+        display: grid;
+        place-items: center;
+        font-weight: 900;
+        color: var(--purple-2);
+      }
+
+      .wheel-side {
+        background: rgba(255,255,255,0.72);
+        border: 1px solid rgba(190, 197, 255, 0.38);
+        border-radius: 24px;
+        padding: 22px 18px;
+      }
+
+      .wheel-side h3 {
+        margin: 0 0 12px;
+        font-size: 1.4rem;
+      }
+
+      .wheel-side .reward-list {
+        display: grid;
+        gap: 10px;
+        margin: 14px 0 0;
+      }
+
+      .reward-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 11px 12px;
+        border-radius: 12px;
+        background: #f5f3ff;
+        color: var(--text-1);
+        font-weight: 700;
+      }
+
+      .reward-item .name { color: var(--text-1); }
+      .reward-item .rate { color: var(--purple-2); }
+
+      .modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(26, 28, 43, 0.48);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        padding: 18px;
+      }
+
+      .modal.show { display: flex; }
+
+      .modal-panel {
+        width: min(960px, 100%);
+        background: white;
+        border-radius: 28px;
+        box-shadow: 0 32px 60px rgba(22, 26, 38, 0.2);
+        overflow: hidden;
+        border: 1px solid rgba(170, 178, 225, 0.5);
+      }
+
+      .modal-header {
+        background: linear-gradient(135deg, #0c9d60, #0c6e49);
+        color: white;
+        padding: 18px 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .modal-header h3 {
+        margin: 0;
+        font-size: clamp(1.35rem, 2vw, 2rem);
+      }
+
+      .close-btn {
+        width: 34px;
+        height: 34px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.2);
+        color: white;
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+
+      .modal-body {
+        padding: 22px 20px 26px;
+      }
+
+      .tab-buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+      }
+
+      .tab-btn {
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 1px solid rgba(160, 170, 200, 0.35);
+        background: #f5f5fb;
+        color: var(--text-2);
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .tab-btn.active {
+        background: linear-gradient(135deg, #fff0f7, #edf6ff);
+        border-color: rgba(121, 164, 255, 0.5);
+        color: var(--purple-2);
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active { display: block; }
+
+      .qr-wrap {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 18px;
+        align-items: start;
+      }
+
+      .qr-box {
+        width: 100%;
+        min-height: 260px;
+        border-radius: 20px;
+        border: 1px solid rgba(171, 180, 214, 0.5);
+        background:
+          linear-gradient(135deg, rgba(255,255,255,0.9), rgba(243, 250, 255, 0.9));
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+      }
+
+      .qr-code {
+        width: 190px;
+        height: 190px;
+        background:
+          linear-gradient(90deg, #000 10%, transparent 10%, transparent 20%, #000 20%, #000 30%, transparent 30%, transparent 40%, #000 40%, #000 50%, transparent 50%, transparent 60%, #000 60%, #000 70%, transparent 70%, transparent 80%, #000 80%, #000 90%, transparent 90%),
+          linear-gradient(#000 10%, transparent 10%, transparent 20%, #000 20%, #000 30%, transparent 30%, transparent 40%, #000 40%, #000 50%, transparent 50%, transparent 60%, #000 60%, #000 70%, transparent 70%, transparent 80%, #000 80%, #000 90%, transparent 90%);
+        background-size: 24px 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 12px solid white;
+        box-shadow: 0 10px 22px rgba(108, 124, 174, 0.18);
+      }
+
+      .bank-card {
+        border: 1px solid rgba(170, 178, 225, 0.5);
+        border-radius: 18px;
+        background: linear-gradient(180deg, #fff, #f8faff);
+        padding: 18px;
+      }
+
+      .bank-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(180, 190, 230, 0.34);
+      }
+
+      .bank-row:last-child { border-bottom: none; }
+
+      .bank-row .label {
+        color: var(--text-2);
+        font-weight: 700;
+      }
+
+      .bank-row .value {
+        font-weight: 900;
+        color: var(--text-1);
+        text-align: right;
+      }
+
+      .card-provider {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 10px;
+      }
+
+      .provider-item {
+        border: 2px solid rgba(176, 184, 217, 0.5);
+        background: #f9fafc;
+        border-radius: 14px;
+        min-height: 96px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.2s ease;
+        position: relative;
+      }
+
+      .provider-item.active {
+        border-color: var(--purple-2);
+        background: linear-gradient(135deg, #fff7ff, #edf6ff);
+        box-shadow: 0 10px 18px rgba(130, 103, 255, 0.12);
+      }
+
+      .provider-item .check {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: var(--purple-2);
+        color: white;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-weight: 900;
+        font-size: 0.9rem;
+        right: 10px;
+        top: 10px;
+        opacity: 0;
+        transform: scale(0.6);
+        transition: 0.2s ease;
+      }
+
+      .provider-item.active .check {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .provider-logo {
+        font-weight: 900;
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+        margin-bottom: 10px;
+        letter-spacing: -0.04em;
+      }
+
+      .provider-item[data-name="viettel"] .provider-logo { color: #e41b23; }
+      .provider-item[data-name="mobifone"] .provider-logo { color: #0c5bdc; }
+      .provider-item[data-name="vinaphone"] .provider-logo { color: #1e9aff; }
+      .provider-item[data-name="vietnammobile"] .provider-logo { color: #8d8d94; }
+      .provider-item[data-name="zing"] .provider-logo { color: #ff4a6d; }
+      .provider-item[data-name="garena"] .provider-logo { color: #ff5465; }
+      .provider-item[data-name="vcoin"] .provider-logo { color: #cb3e35; }
+      .provider-item[data-name="megacard"] .provider-logo { color: #1d7fff; }
+
+      .card-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 16px;
+      }
+
+      .card-item {
+        background: #fff;
+        border: 1px solid rgba(175, 182, 228, 0.5);
+        border-radius: 14px;
+        padding: 14px 12px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .card-item.selected {
+        border-color: var(--purple-2);
+        box-shadow: 0 12px 22px rgba(120, 100, 255, 0.12);
+        background: linear-gradient(135deg, #fff9ff, #eef6ff);
+      }
+
+      .card-item .value {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .card-item .price {
+        color: var(--red-1);
+        font-size: 1.2rem;
+        font-weight: 900;
+      }
+
+      .footer {
+        padding: 20px 0 60px;
+        text-align: center;
+        color: var(--text-2);
+        font-weight: 700;
+      }
+
+      .admin-panel {
+        position: fixed;
+        inset: 0;
+        background: rgba(25, 28, 40, 0.52);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 120;
+        padding: 20px;
+      }
+
+      .admin-panel.show { display: flex; }
+
+      .admin-box {
+        width: min(960px, 100%);
+        background: white;
+        border-radius: 24px;
+        box-shadow: 0 28px 60px rgba(15, 19, 31, 0.2);
+        overflow: hidden;
+      }
+
+      .admin-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(135deg, #f9d6ee, #dff1ff);
+        padding: 18px 20px;
+      }
+
+      .admin-header h3 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      .admin-body {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .field.full {
+        grid-column: 1 / -1;
+      }
+
+      .field label {
+        font-weight: 800;
+        color: var(--text-2);
+      }
+
+      .field input {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(170, 178, 225, 0.5);
+        background: #f9fbff;
+      }
+
+      .field input[type="file"] {
+        padding: 12px;
+      }
+
+      .admin-actions {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        margin-top: 8px;
+      }
+
+      @media (max-width: 900px) {
+        .hero-content,
+        .wheel-panel,
+        .qr-wrap,
+        .admin-body {
+          grid-template-columns: 1fr;
+        }
+
+        .card-grid,
+        .card-provider {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .nav { display: none; }
+      }
+
+      @media (max-width: 560px) {
+        .card-grid,
+        .card-provider,
+        .card-list {
+          grid-template-columns: 1fr;
+        }
+
+        .header-inner {
+          flex-wrap: wrap;
+        }
+
+        .top-actions {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .hero-left { padding: 28px 18px; }
+        .hero-right { min-height: 320px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div style="font-size: 0.74rem; opacity: 0.7; letter-spacing: 0.12em;">CLOUD SHOP</div>
+            <div id="storeNameDisplay" style="font-size: 1.2rem;">BUNNI ROBUX</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="#home">Trang chủ</a>
+          <a href="#shop">Mua Robux</a>
+          <a href="#wheel">Vòng quay</a>
+          <a href="#deposit">Nạp tiền</a>
+        </nav>
+
+        <div class="top-actions">
+          <button class="btn btn-secondary" id="adminOpenBtn">Chỉnh sửa</button>
+          <button class="btn btn-primary" onclick="openDepositModal('bank')">Nạp tiền</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-card">
+            <div class="hero-content">
+              <div class="hero-left">
+                <div class="badge">✨ Ưu đãi cực khủng cho thành viên mới</div>
+                <h1>
+                  BUNNI ROBUX
+                  <span class="accent">Nạp Robux siêu nhanh và cute</span>
+                </h1>
+                <p class="subtitle" id="heroSubtitle">
+                  Mua Robux dễ dàng, nhận ưu đãi hấp dẫn, tham gia vòng quay may mắn với phần thưởng xịn xò.
+                  Giao dịch nhanh, an toàn, giao diện cực chill cho Hội viên yêu thích Cinnamoroll.
+                </p>
+
+                <div class="cta-row">
+                  <button class="btn btn-primary" onclick="openDepositModal('bank')">Nạp ngay</button>
+                  <button class="btn btn-secondary" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">Xem gói Robux</button>
+                </div>
+
+                <div class="chip-list">
+                  <div class="chip">⚡ Giao dịch nhanh</div>
+                  <div class="chip">🎁 Chiết khấu thẻ cào</div>
+                  <div class="chip">🎡 Vòng quay may mắn</div>
+                </div>
+              </div>
+
+              <div class="hero-right">
+                <div class="cloud-card"></div>
+                <div class="cute-showcase">
+                  <div class="char">
+                    <div class="ear left"></div>
+                    <div class="ear right"></div>
+                    <div class="head">
+                      <div class="face">
+                        <div class="eye left"></div>
+                        <div class="eye right"></div>
+                        <div class="blush left"></div>
+                        <div class="blush right"></div>
+                        <div class="nose"></div>
+                        <div class="mouth"></div>
+                      </div>
+                    </div>
+                    <div class="body"></div>
+                  </div>
+                </div>
+
+                <div class="stat-mini one">
+                  <div class="number">4.9/5</div>
+                  <div class="label">Đánh giá</div>
+                </div>
+                <div class="stat-mini two">
+                  <div class="number">2K+</div>
+                  <div class="label">Khách hàng</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="shop">
+        <div class="container">
+          <div class="section-header">
+            <h2>Mua Robux</h2>
+            <div class="subtle">Tặng ưu đãi cực hấp dẫn mỗi ngày</div>
+          </div>
+
+          <div class="card-grid">
+            <div class="pkg-card">
+              <span class="tag">BASIC</span>
+              <h3>225</h3>
+              <div class="price">90.000 <small>đ</small></div>
+              <ul>
+                <li>Giảm 0%</li>
+                <li>Phù hợp trải nghiệm</li>
+                <li>Giao dịch tức thì</li>
+              </ul>
+              <button class="btn btn-soft" onclick="openDepositModal('bank')">Mua ngay</button>
+            </div>
+
+            <div class="pkg-card featured">
+              <span class="tag">HOT</span>
+              <h3>1.000</h3>
+              <div class="price">280.000 <small>đ</small></div>
+              <ul>
+                <li>Ưu đãi khuyến mại</li>
+                <li>Phù hợp người chơi đều</li>
+                <li>Vòng quay được tham gia</li>
+              </ul>
+              <button class="btn btn-primary" onclick="openDepositModal('bank')">Mua ngay</button>
+            </div>
+
+            <div class="pkg-card">
+              <span class="tag">POPULAR</span>
+              <h3>2.500</h3>
+              <div class="price">640.000 <small>đ</small></div>
+              <ul>
+                <li>Tiết kiệm chi phí</li>
+                <li>Uy tín cao</li>
+                <li>Hỗ trợ nhanh</li>
+              </ul>
+              <button class="btn btn-soft" onclick="openDepositModal('bank')">Mua ngay</button>
+            </div>
+
+            <div class="pkg-card">
+              <span class="tag">VIP</span>
+              <h3>7.000</h3>
+              <div class="price">1.700.000 <small>đ</small></div>
+              <ul>
+                <li>Ưu đãi VIP</li>
+                <li>Chốt đơn tối đa</li>
+                <li>Có thể nhận quà</li>
+              </ul>
+              <button class="btn btn-primary" onclick="openDepositModal('bank')">Mua ngay</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="wheel">
+        <div class="container">
+          <div class="section-header">
+            <h2>Vòng quay may mắn</h2>
+            <div class="subtle">Quay miễn phí mỗi ngày</div>
+          </div>
+
+          <div class="wheel-wrap">
+            <div class="wheel-panel">
+              <div class="wheel-box">
+                <div class="spin-pointer"></div>
+                <div class="wheel" id="wheel">
+                  <div class="segment"><span>100k</span></div>
+                  <div class="segment"><span>50k</span></div>
+                  <div class="segment"><span>200k</span></div>
+                  <div class="segment"><span>Free</span></div>
+                </div>
+                <div class="wheel-center">GO</div>
+              </div>
+
+              <div class="wheel-side">
+                <h3>Phần thưởng</h3>
+                <div class="reward-list">
+                  <div class="reward-item"><span class="name">100.000đ</span><span class="rate">25%</span></div>
+                  <div class="reward-item"><span class="name">50.000đ</span><span class="rate">20%</span></div>
+                  <div class="reward-item"><span class="name">200.000đ</span><span class="rate">15%</span></div>
+                  <div class="reward-item"><span class="name">Free spin</span><span class="rate">40%</span></div>
+                </div>
+
+                <div style="margin-top: 20px;">
+                  <button class="btn btn-primary" id="spinBtn" style="width: 100%;">Quay ngay</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="deposit">
+        <div class="container">
+          <div class="section-header">
+            <h2>Phương thức nạp tiền</h2>
+            <div class="subtle">Giao dịch minh bạch, nhanh chóng, đa dạng</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">
+        <div class="container">
+          <div id="footerText">BUNNI ROBUX • Cinnamoroll Cloud Store</div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal" id="depositModal" aria-modal="true" role="dialog">
+      <div class="modal-panel">
+        <div class="modal-header">
+          <h3>Nạp tiền</h3>
+          <button class="close-btn" onclick="closeModal()">×</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="bank">Chuyển khoản</button>
+            <button class="tab-btn" data-tab="card">Nạp thẻ cào</button>
+          </div>
+
+          <div class="tab-content active" id="bank-tab">
+            <div class="qr-wrap">
+              <div class="qr-box">
+                <div class="qr-code"></div>
+              </div>
+
+              <div class="bank-card">
+                <div class="bank-row">
+                  <div class="label">Tên ngân hàng</div>
+                  <div class="value" id="bankNameValue">Vietcombank</div>
+                </div>
+                <div class="bank-row">
+                  <div class="label">Tên tài khoản</div>
+                  <div class="value" id="accountNameValue">NGUYEN THI BUNNI</div>
+                </div>
+                <div class="bank-row">
+                  <div class="label">Số tài khoản</div>
+                  <div class="value" id="accountNumberValue">1023456789</div>
+                </div>
+                <div class="bank-row">
+                  <div class="label">Nội dung chuyển khoản</div>
+                  <div class="value" id="contentValue">BUNNI ROBUX + Số điện thoại</div>
+                </div>
+
+                <div style="margin-top: 16px;">
+                  <button class="btn btn-primary" style="width:100%;" onclick="copyBankInfo()">Sao chép thông tin</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="card-tab">
+            <div class="card-provider" id="providerList"></div>
+
+            <div class="card-list" id="cardList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="admin-panel" id="adminModal">
+      <div class="admin-box">
+        <div class="admin-header">
+          <h3>Chỉnh sửa ảnh & thông tin</h3>
+          <button class="close-btn" style="color:#333; background: rgba(0,0,0,0.06);" onclick="toggleAdminPanel(false)">×</button>
+        </div>
+
+        <div class="admin-body">
+          <div class="field">
+            <label for="storeName">Tên website</label>
+            <input id="storeName" type="text" value="BUNNI ROBUX" />
+          </div>
+
+          <div class="field">
+            <label for="heroSubtitleInput">Mô tả hero</label>
+            <input id="heroSubtitleInput" type="text" value="Mua Robux dễ dàng..." />
+          </div>
+
+          <div class="field">
+            <label for="footerTextInput">Dòng chân</label>
+            <input id="footerTextInput" type="text" value="BUNNI ROBUX • Cinnamoroll Cloud Store" />
+          </div>
+
+          <div class="field">
+            <label for="bankName">Tên ngân hàng</label>
+            <input id="bankName" type="text" value="Vietcombank" />
+          </div>
+
+          <div class="field">
+            <label for="accountName">Tên tài khoản</label>
+            <input id="accountName" type="text" value="NGUYEN THI BUNNI" />
+          </div>
+
+          <div class="field">
+            <label for="accountNumber">Số tài khoản</label>
+            <input id="accountNumber" type="text" value="1023456789" />
+          </div>
+
+          <div class="field full">
+            <label for="logoFile">Ảnh logo</label>
+            <input id="logoFile" type="file" accept="image/*" />
+          </div>
+
+          <div class="field full">
+            <label for="qrFile">Ảnh QR chuyển khoản</label>
+            <input id="qrFile" type="file" accept="image/*" />
+          </div>
+
+          <div class="admin-actions">
+            <button class="btn btn-secondary" onclick="toggleAdminPanel(false)">Hủy</button>
+            <button class="btn btn-primary" onclick="saveSettings()">Lưu thay đổi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const defaultConfig = {
+        storeName: "BUNNI ROBUX",
+        heroSubtitle: "Mua Robux dễ dàng, nhận ưu đãi hấp dẫn, tham gia vòng quay may mắn với phần thưởng xịn xò. Giao dịch nhanh, an toàn, giao diện cực chill cho Hội viên yêu thích Cinnamoroll.",
+        footerText: "BUNNI ROBUX • Cinnamoroll Cloud Store",
+        bankName: "Vietcombank",
+        accountName: "NGUYEN THI BUNNI",
+        accountNumber: "1023456789",
+        content: "BUNNI ROBUX + Số điện thoại",
+        logo: "",
+        qrImage: ""
+      };
+
+      const providers = [
+        { name: "viettel", label: "Viettel", color: "#e41b23" },
+        { name: "mobifone", label: "Mobifone", color: "#0c5bdc" },
+        { name: "vinaphone", label: "Vinaphone", color: "#1e9aff" },
+        { name: "vietnammobile", label: "VietNamMobile", color: "#8d8d94" },
+        { name: "zing", label: "Zing", color: "#ff4a6d" },
+        { name: "garena", label: "Garena", color: "#ff5465" },
+        { name: "vcoin", label: "Vcoin", color: "#cb3e35" },
+        { name: "megacard", label: "MegaCard", color: "#1d7fff" }
+      ];
+
+      const cardData = {
+        viettel: [
+          { value: "10.000", price: "9.700đ" },
+          { value: "20.000", price: "19.400đ" },
+          { value: "30.000", price: "29.100đ" },
+          { value: "50.000", price: "48.500đ" },
+          { value: "100.000", price: "97.000đ" },
+          { value: "200.000", price: "194.000đ" },
+          { value: "300.000", price: "291.000đ" },
+          { value: "500.000", price: "485.000đ" }
+        ],
+        mobifone: [
+          { value: "10.000", price: "9.600đ" },
+          { value: "20.000", price: "19.200đ" },
+          { value: "30.000", price: "28.800đ" },
+          { value: "50.000", price: "48.000đ" },
+          { value: "100.000", price: "95.500đ" },
+          { value: "200.000", price: "191.000đ" },
+          { value: "300.000", price: "286.500đ" },
+          { value: "500.000", price: "478.500đ" }
+        ],
+        vinaphone: [
+          { value: "10.000", price: "9.700đ" },
+          { value: "20.000", price: "19.400đ" },
+          { value: "30.000", price: "29.100đ" },
+          { value: "50.000", price: "48.500đ" },
+          { value: "100.000", price: "97.000đ" },
+          { value: "200.000", price: "194.000đ" },
+          { value: "300.000", price: "291.000đ" },
+          { value: "500.000", price: "485.000đ" }
+        ],
+        vietnammobile: [
+          { value: "10.000", price: "9.500đ" },
+          { value: "20.000", price: "18.900đ" },
+          { value: "30.000", price: "28.400đ" },
+          { value: "50.000", price: "47.000đ" },
+          { value: "100.000", price: "94.000đ" },
+          { value: "200.000", price: "188.000đ" },
+          { value: "300.000", price: "282.000đ" },
+          { value: "500.000", price: "470.000đ" }
+        ],
+        zing: [
+          { value: "10.000", price: "9.800đ" },
+          { value: "20.000", price: "19.500đ" },
+          { value: "30.000", price: "29.200đ" },
+          { value: "50.000", price: "48.700đ" },
+          { value: "100.000", price: "97.400đ" },
+          { value: "200.000", price: "194.800đ" },
+          { value: "300.000", price: "292.000đ" },
+          { value: "500.000", price: "485.600đ" }
+        ],
+        garena: [
+          { value: "10.000", price: "9.600đ" },
+          { value: "20.000", price: "19.100đ" },
+          { value: "30.000", price: "28.800đ" },
+          { value: "50.000", price: "48.000đ" },
+          { value: "100.000", price: "95.000đ" },
+          { value: "200.000", price: "190.000đ" },
+          { value: "300.000", price: "285.000đ" },
+          { value: "500.000", price: "475.000đ" }
+        ],
+        vcoin: [
+          { value: "10.000", price: "9.400đ" },
+          { value: "20.000", price: "18.800đ" },
+          { value: "30.000", price: "28.200đ" },
+          { value: "50.000", price: "47.000đ" },
+          { value: "100.000", price: "93.500đ" },
+          { value: "200.000", price: "187.000đ" },
+          { value: "300.000", price: "280.500đ" },
+          { value: "500.000", price: "467.500đ" }
+        ],
+        megacard: [
+          { value: "10.000", price: "9.300đ" },
+          { value: "20.000", price: "18.700đ" },
+          { value: "30.000", price: "28.100đ" },
+          { value: "50.000", price: "46.800đ" },
+          { value: "100.000", price: "93.000đ" },
+          { value: "200.000", price: "186.000đ" },
+          { value: "300.000", price: "279.000đ" },
+          { value: "500.000", price: "465.000đ" }
+        ]
+      };
+
+      let selectedProvider = "vinaphone";
+      let selectedCardValue = null;
+      let wheelSpinning = false;
+
+      function loadConfig() {
+        const saved = JSON.parse(localStorage.getItem("bunniRobuxConfig") || "null");
+        const config = saved || defaultConfig;
+
+        document.getElementById("storeNameDisplay").textContent = config.storeName || defaultConfig.storeName;
+        document.title = config.storeName || defaultConfig.storeName;
+        document.getElementById("heroSubtitle").textContent = config.heroSubtitle || defaultConfig.heroSubtitle;
+        document.getElementById("footerText").textContent = config.footerText || defaultConfig.footerText;
+
+        document.getElementById("bankNameValue").textContent = config.bankName || defaultConfig.bankName;
+        document.getElementById("accountNameValue").textContent = config.accountName || defaultConfig.accountName;
+        document.getElementById("accountNumberValue").textContent = config.accountNumber || defaultConfig.accountNumber;
+        document.getElementById("contentValue").textContent = config.content || defaultConfig.content;
+
+        document.getElementById("storeName").value = config.storeName || defaultConfig.storeName;
+        document.getElementById("heroSubtitleInput").value = config.heroSubtitle || defaultConfig.heroSubtitle;
+        document.getElementById("footerTextInput").value = config.footerText || defaultConfig.footerText;
+        document.getElementById("bankName").value = config.bankName || defaultConfig.bankName;
+        document.getElementById("accountName").value = config.accountName || defaultConfig.accountName;
+        document.getElementById("accountNumber").value = config.accountNumber || defaultConfig.accountNumber;
+
+        if (config.qrImage) {
+          document.querySelector(".qr-code").style.backgroundImage = `url('${config.qrImage}')`;
+          document.querySelector(".qr-code").style.backgroundSize = "cover";
+          document.querySelector(".qr-code").style.backgroundRepeat = "no-repeat";
+          document.querySelector(".qr-code").style.backgroundPosition = "center";
+          document.querySelector(".qr-code").style.backgroundColor = "#fff";
+        } else {
+          document.querySelector(".qr-code").style.backgroundImage = "";
+          document.querySelector(".qr-code").style.backgroundColor = "#fff";
+          document.querySelector(".qr-code").style.backgroundSize = "cover";
+        }
+      }
+
+      function saveSettings() {
+        const config = {
+          storeName: document.getElementById("storeName").value || defaultConfig.storeName,
+          heroSubtitle: document.getElementById("heroSubtitleInput").value || defaultConfig.heroSubtitle,
+          footerText: document.getElementById("footerTextInput").value || defaultConfig.footerText,
+          bankName: document.getElementById("bankName").value || defaultConfig.bankName,
+          accountName: document.getElementById("accountName").value || defaultConfig.accountName,
+          accountNumber: document.getElementById("accountNumber").value || defaultConfig.accountNumber,
+          content: "BUNNI ROBUX + Số điện thoại",
+          qrImage: localStorage.getItem("bunniRobuxQrImage") || "",
+          logo: localStorage.getItem("bunniRobuxLogo") || ""
+        };
+
+        localStorage.setItem("bunniRobuxConfig", JSON.stringify(config));
+        loadConfig();
+        toggleAdminPanel(false);
+      }
+
+      function toggleAdminPanel(show) {
+        document.getElementById("adminModal").classList.toggle("show", show);
+      }
+
+      document.getElementById("adminOpenBtn").addEventListener("click", () => {
+        toggleAdminPanel(true);
+      });
+
+      document.getElementById("logoFile").addEventListener("change", function (e) {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function () {
+          localStorage.setItem("bunniRobuxLogo", reader.result);
+          const brandMark = document.querySelector(".brand-mark");
+          brandMark.style.background = `url('${reader.result}') center/cover no-repeat`;
+          brandMark.innerHTML = "";
+        };
+        reader.readAsDataURL(file);
+      });
+
+      document.getElementById("qrFile").addEventListener("change", function (e) {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function () {
+          localStorage.setItem("bunniRobuxQrImage", reader.result);
+          const qr = document.querySelector(".qr-code");
+          qr.style.backgroundImage = `url('${reader.result}')`;
+          qr.style.backgroundSize = "cover";
+          qr.style.backgroundRepeat = "no-repeat";
+          qr.style.backgroundPosition = "center";
+          qr.style.backgroundColor = "#fff";
+        };
+        reader.readAsDataURL(file);
+      });
+
+      function renderProviders() {
+        const container = document.getElementById("providerList");
+        container.innerHTML = "";
+
+        providers.forEach((provider) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "provider-item" + (provider.name === selectedProvider ? " active" : "");
+          btn.dataset.name = provider.name;
+          btn.innerHTML = `
+            <div class="check">✓</div>
+            <div class="provider-logo" style="color:${provider.color};">${provider.label}</div>
+          `;
+
+          btn.addEventListener("click", () => {
+            selectedProvider = provider.name;
+            renderProviders();
+            renderCards();
+          });
+
+          container.appendChild(btn);
+        });
+      }
+
+      function renderCards() {
+        const container = document.getElementById("cardList");
+        container.innerHTML = "";
+        const cards = cardData[selectedProvider] || cardData.vinaphone;
+
+        cards.forEach((card) => {
+          const item = document.createElement("button");
+          item.type = "button";
+          item.className = "card-item" + (selectedCardValue === card.value ? " selected" : "");
+          item.innerHTML = `
+            <div class="value">${card.value}</div>
+            <div class="price">${card.price}</div>
+          `;
+          item.addEventListener("click", () => {
+            selectedCardValue = card.value;
+            renderCards();
+          });
+          container.appendChild(item);
+        });
+      }
+
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".tab-btn").forEach((b) => b.classList.toggle("active", b === btn));
+          document.querySelectorAll(".tab-content").forEach((t) => t.classList.toggle("active", t.id === btn.dataset.tab + "-tab"));
+        });
+      });
+
+      function openDepositModal(tab) {
+        const modal = document.getElementById("depositModal");
+        modal.classList.add("show");
+
+        const activeTab = tab || "bank";
+        document.querySelectorAll(".tab-btn").forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.tab === activeTab);
+        });
+        document.querySelectorAll(".tab-content").forEach((t) => {
+          t.classList.toggle("active", t.id === activeTab + "-tab");
+        });
+      }
+
+      function closeModal() {
+        document.getElementById("depositModal").classList.remove("show");
+      }
+
+      function copyBankInfo() {
+        const text = [
+          document.getElementById("bankNameValue").textContent,
+          document.getElementById("accountNameValue").textContent,
+          document.getElementById("accountNumberValue").textContent,
+          document.getElementById("contentValue").textContent
+        ].join(" | ");
+
+        navigator.clipboard.writeText(text).then(() => {
+          alert("Đã sao chép thông tin chuyển khoản!");
+        }).catch(() => {
+          alert("Sao chép thất bại. Vui lòng copy thủ công.");
+        });
+      }
+
+      document.getElementById("spinBtn").addEventListener("click", () => {
+        if (wheelSpinning) return;
+        const wheel = document.getElementById("wheel");
+        const results = [
+          0, 90, 180, 270
+        ];
+        const randomSpin = results[Math.floor(Math.random() * results.length)];
+        wheelSpinning = true;
+
+        wheel.style.transform = `rotate(${randomSpin + 1080}deg)`;
+
+        setTimeout(() => {
+          wheelSpinning = false;
+          alert("Chúc mừng! Bạn đã quay trúng phần thưởng!");
+        }, 4500);
+      });
+
+      loadConfig();
+      renderProviders();
+      renderCards();
+
+      if (localStorage.getItem("bunniRobuxLogo")) {
+        const brandMark = document.querySelector(".brand-mark");
+        brandMark.style.background = `url('${localStorage.getItem("bunniRobuxLogo")}') center/cover no-repeat`;
+      }
+    </script>
+  </body>
+</html>
